@@ -1,0 +1,37 @@
+---
+    import Cartas from "../Cartas.astro";
+    const cartas = [
+
+        {   
+            imagen: "/card1.jpg",
+            titular: "Barcelona vs Real Madrid",
+            serie: "La Liga",
+            horario: "2:30pm"
+        },
+        {   
+            imagen: "/card2.jpg",
+            titular: "Milan vs Inter",
+            serie: "Serie A",
+            horario: "3:30pm"
+        },
+        {   
+            imagen: "/card3.jpg",
+            titular: "Psg vs Bayern",
+            serie: "Champions League",
+            horario: "4:30pm"
+        },
+    ]
+---
+
+<section class="pb-20" id="partidos">
+    <h2 class="mb-8 md:text-4xl text-3xl  lg:pl-8 pl-0 font-semibold lg:text-start text-center">Ver partidos en GoalNet</h2>
+    <div class="grid lg:grid-cols-3 grid-cols-1 place-content-center mx-auto">
+        {cartas.map(carta => {
+            return (<Cartas imagen={carta.imagen} titular={carta.titular} serie={carta.serie} horario={carta.horario}  />)
+        })}
+    </div>
+</section>
+
+<style scoped>
+
+</style>

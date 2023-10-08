@@ -1,0 +1,35 @@
+---
+    const imgCompeticiones = [
+        "/Card-champions-league.jpg",
+        "/Card-La-Liga.jpg",
+        "/Card-Copa-Mundial-1.jpg",
+        "/Card-Premier-League-1.jpg"
+    ];
+
+    const imgEquipos = [
+        "/Card-Barcelona.jpg",
+        "/Card-Real-Madrid.jpg",
+        "/Card-Copa-Mundial.jpg",
+        "/Card-Premier-League.jpg",
+    ];
+
+---
+
+<section class="w-full pb-20 lg:px-8">
+    <article class="flex flex-col lg:items-start items-center pb-20" id="competencia">
+        <h2 class="mb-8 font-semibold md:text-4xl text-3xl md:text-left text-center">Competiciones populares</h2>
+        <ul class="w-full gap-8 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
+            {imgCompeticiones.map(img => (<li class="mx-auto"><img class="max-w-full h-auto" src={img}/></li>))}
+        </ul>
+    </article>
+    <article class="flex flex-col lg:items-start items-center pt-20" id="equipos">
+        <h2 class="mb-8 font-semibold md:text-4xl text-3xl md:text-left text-center">Equipos Populares</h2>
+        <ul class="w-full gap-8 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1">
+            {imgEquipos.map(img => (<li class="mx-auto"><img class="max-w-full h-auto" src={img}/></li>))}
+        </ul>
+    </article>
+</section>
+
+<style scoped>
+
+</style>
