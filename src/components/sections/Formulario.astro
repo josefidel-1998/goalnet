@@ -1,4 +1,6 @@
 ---
+    import paises from "../../paises.json"
+    
 
 ---
 
@@ -8,14 +10,18 @@
             <div class="flex flex-col items-center justify-center text-left">
                 <legend class="md:text-5xl text-4xl md:text-left text-center">Suscríbete a nuestra newsletter</legend>
                 <div class="w-full flex flex-col mt-4">
-                    <label class="text-xl font-light" for="nombre">Nombre completo</label>
-                    <input class="w-[95%] rounded-xl mb-4" id="nombre" type="text" />
-                    <label class="text-xl font-light" for="email">Correo Electronico</label>
-                    <input class="w-[95%] rounded-xl mb-4" id="email" type="email" />
-                    <label class="text-xl font-light" for="pais">Pais</label>
-                    <input class="w-[95%] rounded-xl mb-4" id="pais" type="text" />
+                    <label class="text-xl font-bold" for="nombre">Nombre completo</label>
+                    <input class="w-[95%] rounded-xl mb-4 text-black" id="nombre" type="text" />
+                    <label class="text-xl font-bold" for="email">Correo Electronico</label>
+                    <input class="w-[95%] rounded-xl mb-4 text-black" id="email" type="email" />
+                    <label class="text-xl font-bold" for="pais">Pais</label>
+                    <select class="w-[95%] rounded-xl mb-4 text-black" id="pais">
+                        {paises.map(pais => (
+                            <option class="bg-blue-900" value={pais}>{pais}</option>
+                        ))}
+                    </select>
                     <input 
-                    class="md:w-[35%] w-1/2 rounded-full text-2xl font-semibold text-center mx-auto py-1 mt-4 btn__suscribirse" 
+                    class="md:w-[35%] cursor-pointer w-1/2 rounded-full text-2xl font-semibold text-center mx-auto py-1 mt-4 btn__suscribirse" 
                     type="submit" 
                     value="Suscribirme" />
                 </div>
@@ -33,5 +39,9 @@
     }
     .btn__suscribirse{
         background-color: #779900;
+        transition: all 0.3s ease-in-out;
+    }
+    .btn__suscribirse:hover{
+        background-color: #607a02d4;
     }
 </style>

@@ -6,10 +6,16 @@
     <div class="flex lg:flex-row flex-col justify-between gap-y-20 mx-auto py-4">
         <nav class="flex md:flex-row flex-col items-center gap-16">
             <h1 class="p-1 text-3xl">Goalnet</h1>
-            <ul class="flex md:flex-row flex-col items-center gap-20 mx-auto md:mb-0 mb-4">
-                <li><a class="text-3xl" href="#partidos">Partidos</a></li>
-                <li><a class="text-3xl" href="#equipos">Equipos</a></li>
-                <li><a class="text-3xl" href="#competencia">Competiciones</a></li>
+            <ul class="flex md:flex-row flex-col items-center gap-14 mx-auto md:mb-0 mb-4">
+                <li class="ease-in-out rounded-full cursor-pointer duration-200 px-6 py-4 hover:bg-blue-800">
+                    <a class="text-xl" href="#partidos">Partidos</a>
+                </li>
+                <li class="ease-in-out rounded-full cursor-pointer duration-200 px-6 py-4 hover:bg-blue-800">
+                    <a class="text-xl" href="#equipos">Equipos</a>
+                </li>
+                <li class="ease-in-out rounded-full cursor-pointer duration-200 px-6 py-4 hover:bg-blue-800">
+                    <a class="text-xl" href="#competencia">Competiciones</a>
+                </li>
             </ul>
         </nav>
         <button 
@@ -29,6 +35,10 @@
     }
     .btn__suscribirse{
         background-color: #779900;
+        transition: all 0.3s ease-in-out;
+    }
+    .btn__suscribirse:hover{
+        background-color: #607a02d4;
     }
     h1{
         background-color: gray;
